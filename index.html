@@ -5,63 +5,72 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>CrackedMilk - Edgy Marketing Agency</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			#video-bg {
-				position: fixed;
-				top: 0;
-				left: 0;
-				min-width: 100%;
-				min-height: 100%;
-				width: auto;
-				height: auto;
-				z-index: -2;
-				object-fit: cover;
-				background: #000;
-			}
-			#bg { display: none !important; }
-		</style>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<video id="video-bg" autoplay loop muted playsinline poster="spilled_milk.png">
-				<source src="spilled_milk.mp4" type="video/mp4">
-			</video>
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>CrackedMilk</h1>
-						<p>Edgy Marketing Agency &nbsp;&bull;&nbsp; Influencers &nbsp;&bull;&nbsp; AI Marketing &nbsp;&bull;&nbsp; Viral Effects</p>
-						<nav>
-							<ul>
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+<head>
+	<title>CrackedMilk - Edgy Marketing Agency</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		#video-bg {
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -2;
+			object-fit: cover;
+			background: #000;
+		}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
+		#bg {
+			display: none !important;
+		}
+	</style>
+</head>
 
-			</div>
+<body class="is-preload">
+	<div id="wrapper">
+		<video id="video-bg" autoplay loop muted playsinline poster="spilled_milk.png">
+			<source src="spilled_milk.mp4" type="video/mp4">
+		</video>
+		<div id="bg"></div>
+		<div id="overlay"></div>
+		<div id="main">
+
+			<!-- Header -->
+			<header id="header">
+				<h1><img src="assets/logo.png" alt="CrackedMilk"
+						style="max-width: 400px; height: auto; margin-bottom: 2em;"></h1>
+				<p>Synthetic Creators &nbsp;&bull;&nbsp; AI Video &nbsp;&bull;&nbsp; Viral Engines</p>
+				<nav>
+					<ul>
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+			</footer>
+
 		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+	</div>
+	<script>
+		window.onload = function () { document.body.classList.remove('is-preload'); }
+		window.ontouchmove = function () { return false; }
+		window.onorientationchange = function () { document.body.scrollTop = 0; }
+	</script>
+</body>
+
 </html>
