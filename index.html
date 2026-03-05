@@ -45,10 +45,76 @@
 			background: rgba(0, 0, 0, 0.58) !important;
 		}
 
-		/* ── HERO ── */
-		#header {
-			padding: 3em 2em 2.5em;
+		/* ── STICKY NAV ── */
+		#site-nav {
+			position: static;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 2.5em;
+			height: 60px;
+			background: rgba(0, 0, 0, 0.45);
+			backdrop-filter: blur(16px);
+			-webkit-backdrop-filter: blur(16px);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+			transition: background 0.3s;
 		}
+
+		#site-nav .nav-logo {
+			font-size: 1em;
+			font-weight: 900;
+			color: #fff;
+			text-decoration: none;
+			border: none;
+			letter-spacing: 0.02em;
+		}
+
+		#site-nav ul {
+			list-style: none;
+			display: flex;
+			gap: 2em;
+			margin: 0;
+			padding: 0;
+		}
+
+		#site-nav ul li a {
+			color: rgba(255, 255, 255, 0.75);
+			text-decoration: none;
+			border: none;
+			font-size: 0.78em;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-weight: 600;
+			transition: color 0.2s;
+		}
+
+		#site-nav ul li a:hover {
+			color: #fff;
+		}
+
+		#site-nav .nav-cta {
+			background: #fff;
+			color: #000 !important;
+			padding: 0.45em 1.3em;
+			border-radius: 50px;
+			border: none !important;
+			font-weight: 700 !important;
+			transition: background 0.2s !important;
+		}
+
+		#site-nav .nav-cta:hover {
+			background: rgba(255, 255, 255, 0.85) !important;
+		}
+
+		/* push hero down below the nav */
+		#header {
+			padding-top: 4em;
+		}
+
 
 		#header img.logo {
 			max-width: 340px;
@@ -255,10 +321,108 @@
 			background: rgba(255, 255, 255, 0.85);
 			transform: translateY(-2px);
 		}
+
+		/* ── STICKY NAV ── */
+		#site-nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 100;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1em 2em;
+			background: rgba(0, 0, 0, 0.6);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		#site-nav .nav-logo {
+			font-weight: 700;
+			font-size: 1.2em;
+			color: #fff;
+			text-decoration: none;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+		}
+
+		#site-nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			gap: 1.5em;
+		}
+
+		#site-nav ul li a {
+			color: rgba(255, 255, 255, 0.7);
+			text-decoration: none;
+			font-size: 0.95em;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
+
+		#site-nav ul li a:hover {
+			color: #fff;
+		}
+
+		#site-nav .nav-cta {
+			display: inline-block;
+			background: #fff;
+			color: #000;
+			padding: 0.6em 1.5em;
+			border-radius: 50px;
+			font-weight: 700;
+			font-size: 0.85em;
+			text-decoration: none;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			transition: background 0.2s, transform 0.2s;
+		}
+
+		#site-nav .nav-cta:hover {
+			background: rgba(255, 255, 255, 0.85);
+			transform: translateY(-2px);
+		}
+
+		/* Adjust body padding for fixed nav */
+		body {
+			padding-top: 4.5em;
+			/* Height of the nav bar */
+		}
+
+		@media (max-width: 768px) {
+			#site-nav ul {
+				display: none;
+				/* Hide nav links on smaller screens */
+			}
+
+			#site-nav {
+				justify-content: center;
+				/* Center logo and CTA */
+			}
+
+			#site-nav .nav-cta {
+				margin-left: 1em;
+			}
+		}
 	</style>
 </head>
 
 <body class="is-preload">
+
+	<!-- Sticky nav -->
+	<nav id="site-nav">
+		<a href="#" class="nav-logo">CrackedMilk</a>
+		<ul>
+			<li><a href="#services">What We Do</a></li>
+			<li><a href="#edge">Our Edge</a></li>
+			<li><a href="#cta">Contact</a></li>
+		</ul>
+		<a href="mailto:hello@crackedmilk.com" class="nav-cta">Get in Touch</a>
+	</nav>
+
 	<div id="wrapper">
 		<video id="video-bg" autoplay loop muted playsinline>
 			<source src="spilled_milk.mp4" type="video/mp4">
