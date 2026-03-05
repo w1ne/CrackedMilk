@@ -407,6 +407,33 @@
 				margin-left: 1em;
 			}
 		}
+
+		/* ── FOOTER FIX: reset the absolute-positioned stripe from main.css ── */
+		#footer {
+			position: static;
+			height: auto;
+			line-height: normal;
+			background: rgba(0, 0, 0, 0.6);
+			border-top: 1px solid rgba(255, 255, 255, 0.08);
+			padding: 1.5em 2em;
+			text-align: center;
+		}
+
+		#footer .copyright {
+			color: rgba(255, 255, 255, 0.4);
+			font-size: 0.82em;
+			letter-spacing: 0.05em;
+		}
+
+		/* ── MAIN: remove min-height so it doesn't create extra blank space ── */
+		#main {
+			min-height: unset;
+			display: block;
+		}
+
+		#main:before {
+			display: none;
+		}
 	</style>
 </head>
 
@@ -414,10 +441,12 @@
 
 	<!-- Sticky nav -->
 	<nav id="site-nav">
-		<a href="#" class="nav-logo">CrackedMilk</a>
+		<a href="#" class="nav-logo"><img src="assets/logo.png" alt="CrackedMilk"
+				style="height: 40px; width: auto; display: block;"></a>
 		<ul>
 			<li><a href="#services">What We Do</a></li>
 			<li><a href="#edge">Our Edge</a></li>
+			<li><a href="#eotm">🏆 Employee of the Month</a></li>
 			<li><a href="#cta">Contact</a></li>
 		</ul>
 		<a href="mailto:hello@crackedmilk.com" class="nav-cta">Get in Touch</a>
