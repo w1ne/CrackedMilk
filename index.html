@@ -322,6 +322,127 @@
 			transform: translateY(-2px);
 		}
 
+		/* ── EMPLOYEE OF THE MONTH ── */
+		#eotm {
+			position: relative;
+			z-index: 10;
+			padding: 5em 2em 5em;
+			text-align: center;
+		}
+
+		#eotm h2 {
+			font-size: 2em;
+			font-weight: 700;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			margin-bottom: 0.3em;
+		}
+
+		.eotm-card {
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			background: rgba(255, 255, 255, 0.05);
+			border: 1px solid rgba(255, 215, 0, 0.25);
+			backdrop-filter: blur(14px);
+			border-radius: 24px;
+			padding: 3em 3.5em;
+			max-width: 380px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 0 60px rgba(255, 215, 0, 0.08), 0 20px 60px rgba(0, 0, 0, 0.4);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.eotm-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 0 80px rgba(255, 215, 0, 0.15), 0 30px 70px rgba(0, 0, 0, 0.5);
+		}
+
+		.eotm-card::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -75%;
+			width: 50%;
+			height: 200%;
+			background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.08), transparent);
+			transform: skewX(-20deg);
+			animation: shimmer 4s infinite;
+		}
+
+		@keyframes shimmer {
+			0% {
+				left: -75%;
+			}
+
+			100% {
+				left: 125%;
+			}
+		}
+
+		.eotm-badge {
+			position: absolute;
+			top: -18px;
+			right: 1.6em;
+			background: linear-gradient(135deg, #FFD700, #FFA500);
+			color: #000;
+			font-size: 0.7em;
+			font-weight: 900;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			padding: 0.4em 0.9em;
+			border-radius: 50px;
+			box-shadow: 0 4px 16px rgba(255, 165, 0, 0.45);
+		}
+
+		.eotm-avatar {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center top;
+			border: 3px solid rgba(255, 215, 0, 0.5);
+			box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+			margin-bottom: 1.4em;
+		}
+
+		.eotm-role {
+			color: rgba(255, 215, 0, 0.8);
+			font-size: 0.78em;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.14em;
+			margin-bottom: 1.4em;
+		}
+
+		.eotm-quote {
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 0.88em;
+			line-height: 1.7;
+			font-style: italic;
+		}
+
+		.eotm-trophy {
+			font-size: 2.2em;
+			margin-bottom: 0.4em;
+			animation: pulse-trophy 2.5s ease-in-out infinite;
+		}
+
+		@keyframes pulse-trophy {
+
+			0%,
+			100% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.12);
+			}
+		}
+
 		/* ── STICKY NAV ── */
 		#site-nav {
 			position: fixed;
@@ -446,7 +567,7 @@
 		<ul>
 			<li><a href="#services">What We Do</a></li>
 			<li><a href="#edge">Our Edge</a></li>
-			<li><a href="#eotm">🏆 Employee of the Month</a></li>
+			<li><a href="#eotm" title="Employee of the Month">🏆</a></li>
 			<li><a href="#cta">Contact</a></li>
 		</ul>
 		<a href="mailto:hello@crackedmilk.com" class="nav-cta">Get in Touch</a>
@@ -464,7 +585,8 @@
 			<header id="header">
 				<img src="assets/logo.png" alt="CrackedMilk Logo" class="logo">
 				<h1>CrackedMilk</h1>
-				<p>AI-Powered Marketing &nbsp;&bull;&nbsp; Full-Stack Growth &nbsp;&bull;&nbsp; Luxury Execution</p>
+				<p>We Don't Do Vitamins &nbsp;&bull;&nbsp; We Scale Painkillers &nbsp;&bull;&nbsp; No Fluff. Just
+					Results.</p>
 				<nav>
 					<ul>
 						<li><a href="mailto:hello@crackedmilk.com" class="icon solid fa-envelope"><span
@@ -480,10 +602,10 @@
 			<!-- Philosophy -->
 			<section id="philosophy">
 				<div class="philosophy-box">
-					<blockquote>"We build you a bespoke AI marketing infrastructure — combining synthetic content,
-						predictive intelligence, and hyper-personalization — that executes faster, tests broader, and
-						converts deeper than any human agency."</blockquote>
-					<span>— The CrackedMilk Approach</span>
+					<blockquote>"Your agency is scared of AI. We're built from it. We don't pitch decks — we ship
+						results. We don't do brainstorms — we do data. We don't ask for 3 months — we deliver in 3
+						days."</blockquote>
+					<span>— The CrackedMilk Doctrine</span>
 				</div>
 			</section>
 
@@ -492,50 +614,53 @@
 			<!-- Services: full offer -->
 			<section id="services">
 				<h2>What We Do</h2>
-				<p class="subtitle">Six interconnected disciplines — deployed together as one AI-powered growth
-					infrastructure.</p>
+				<p class="subtitle">Six weapons. One war. Your competitors won't see it coming.</p>
 				<div class="cards">
 					<div class="card">
 						<span class="icon">🎬</span>
 						<h3>Generative Video Engine</h3>
-						<p>50–100 hyper-personalized short-form videos per week — TikTok, Reels, Shorts, Ads. Synthetic
-							brand creators, AI animation, relentless A/B testing. Content fatigue? Solved.</p>
+						<p>50–100 algorithm-engineered videos per week. We don't post — we <em>flood</em>. TikTok,
+							Reels, Shorts, Ads. Synthetic creators that never burn out. Hooks tested until they hook.
+							Content fatigue? That's a you problem.</p>
 						<span class="tag">Flagship</span>
 					</div>
 					<div class="card">
 						<span class="icon">🔍</span>
 						<h3>Answer Engine Optimization</h3>
-						<p>Google is shifting to AI-first. We structure your content to be the definitive answer cited
-							by ChatGPT, Perplexity, and Google AI Overviews — future-proofing your discoverability.</p>
+						<p>ChatGPT, Perplexity, Google AI — they're the new Google Search, and they're citing someone.
+							Make sure it's you. We structure your content to be the machine-recommended answer in your
+							category, permanently.</p>
 						<span class="tag">Owned Media</span>
 					</div>
 					<div class="card">
 						<span class="icon">📈</span>
 						<h3>Predictive Revenue Analytics</h3>
-						<p>ML models forecast Customer LTV and creator conversion rates <em>before</em> a campaign
-							launches. We optimize budgets on actual revenue signals — never vanity metrics.</p>
+						<p>We run ML before we run ads. LTV, conversion probability, channel ROI — calculated before a
+							single dollar is spent. You stop guessing. We start printing.</p>
 						<span class="tag">Intelligence</span>
 					</div>
 					<div class="card">
 						<span class="icon">⚡</span>
 						<h3>AI Hyper-Personalization</h3>
-						<p>Real-time behavior analysis to dynamically tailor website UX, email cadences, and landing
-							pages at the individual level — driving loyalty and conversion on every channel.</p>
+						<p>Your site shows everyone the same thing. That's insane. We use real-time behavioral data to
+							serve different pages, emails, and CTAs to different people. The right message. The right
+							person. Every time.</p>
 						<span class="tag">Conversion</span>
 					</div>
 					<div class="card">
 						<span class="icon">🎯</span>
 						<h3>Landing Page Surgery</h3>
-						<p>We audit your existing page, apply you-focused copy, add social proof, and run brutal live
-							"Roast Protocol" sessions with real users. Average result: 2× conversion rate.</p>
+						<p>We watch real humans try to use your page. It's brutal. We take notes. Then we rewrite every
+							headline, cut the fluff, and install social proof until your conversion rate breaks. Average
+							lift: 2×.</p>
 						<span class="tag">CRO</span>
 					</div>
 					<div class="card">
 						<span class="icon">📡</span>
 						<h3>Multi-Channel Expansion</h3>
-						<p>Beyond the launch spike — B2B cold outreach, free SEO tools to capture search intent,
-							data-driven programmatic pages, and weekly newsletter nurturing to hold the audience we
-							build.</p>
+						<p>Viral spikes die. We don’t let them. B2B cold outreach, free SEO tools that capture intent,
+							data-driven programmatic pages, and a weekly newsletter that keeps your audience warm. The
+							algorithm forgets you. We make sure your audience doesn’t.</p>
 						<span class="tag">Distribution</span>
 					</div>
 				</div>
@@ -546,7 +671,7 @@
 			<!-- Our edge -->
 			<section id="edge">
 				<h2>The CrackedMilk Edge</h2>
-				<p class="subtitle">We only work on Painkillers. Never Vitamins.</p>
+				<p class="subtitle">Most agencies sell hope. We sell infrastructure.</p>
 				<div class="pillars">
 					<div class="pillar">
 						<span class="pillar-num">01</span>
@@ -560,26 +685,28 @@
 					<div class="pillar">
 						<span class="pillar-num">02</span>
 						<div class="pillar-body">
-							<h4>Speed That Is Structurally Impossible for Humans</h4>
-							<p>We use a bespoke AI infrastructure — Midjourney, Runway, ElevenLabs, n8n, Remotion — to
-								do in 3 days what a traditional agency does in 3 months. At a fraction of the cost.</p>
+							<h4>3 Days. Not 3 Months.</h4>
+							<p>Midjourney. Runway. ElevenLabs. n8n. Remotion. We've built a machine that a 50-person
+								agency cannot replicate with 50 humans. We're not faster — we're in a different league.
+							</p>
 						</div>
 					</div>
 					<div class="pillar">
 						<span class="pillar-num">03</span>
 						<div class="pillar-body">
-							<h4>Computational Precision Over Gut Feeling</h4>
-							<p>Every decision is tested. Every hook is measured. Every budget allocation is driven by
-								revenue signals. We iterate in weekly sprints — fail fast, double down on what wins.</p>
+							<h4>Data Kills Opinions.</h4>
+							<p>We don't care what feels right. We test it. Every hook, every headline, every dollar —
+								measured against revenue. If something isn't winning in 7 days, it's dead. No
+								attachment. Just results.</p>
 						</div>
 					</div>
 					<div class="pillar">
 						<span class="pillar-num">04</span>
 						<div class="pillar-body">
-							<h4>Luxury Aesthetic as Standard</h4>
-							<p>The dark, high-end CrackedMilk aesthetic is not optional. It's the moat. Our brand
-								identity system ensures every deliverable — video, page, email — looks like it cost 10×
-								what it did.</p>
+							<h4>Ugly Doesn't Scale.</h4>
+							<p>Dark. Sharp. Unignorable. The CrackedMilk aesthetic is the moat. Every video, every page,
+								every email — built to look like it cost 10× what it did. Because ugliness is
+								forgettable. We're not.</p>
 						</div>
 					</div>
 				</div>
@@ -587,11 +714,26 @@
 
 			<hr class="divider" />
 
+			<!-- Employee of the Month -->
+			<section id="eotm">
+				<h2>Employee of the Month</h2>
+				<div class="eotm-card">
+					<span class="eotm-badge">⭐ Patrik Palagi</span>
+					<div class="eotm-trophy">🏆</div>
+					<img src="assets/patrik.png" alt="Patrik Palagi" class="eotm-avatar">
+					<div class="eotm-role">Creative Strategist</div>
+					<p class="eotm-quote">&ldquo;Keeping the vibes from cracking.&rdquo;</p>
+				</div>
+			</section>
+
+			<hr class="divider" />
+
 			<!-- CTA -->
 			<section id="cta">
-				<h2>Ready to crack the algorithm?</h2>
-				<p>Tell us what you're building. We'll tell you how to make it impossible to ignore.</p>
-				<a href="mailto:hello@crackedmilk.com" class="btn">Get in Touch</a>
+				<h2>Think your product can handle it?</h2>
+				<p>We take a look. If we like what we see, we'll tell you exactly how to make it impossible to ignore.
+					No pitch deck. No retainer trap. Just brutal honesty and a plan.</p>
+				<a href="mailto:hello@crackedmilk.com" class="btn">Show Us What You've Got</a>
 			</section>
 
 			<!-- Footer -->
