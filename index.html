@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description"
-		content="CrackedMilk is a high-end AI marketing agency. We build bespoke synthetic creator pipelines that generate hyper-personalized video content at scale." />
+		content="CrackedMilk is a high-end AI marketing agency. We combine synthetic video, predictive analytics, AEO, and hyper-personalization to scale brands that solve real problems." />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -41,58 +41,97 @@
 			display: none !important;
 		}
 
-		/* Dark overlay over the video */
 		#overlay {
-			background: rgba(0, 0, 0, 0.55) !important;
+			background: rgba(0, 0, 0, 0.58) !important;
 		}
 
 		/* ── HERO ── */
 		#header {
-			padding: 3em 2em 2em;
+			padding: 3em 2em 2.5em;
 		}
 
 		#header img.logo {
 			max-width: 340px;
-			width: 60vw;
+			width: 55vw;
 			height: auto;
 			margin-bottom: 1.2em;
 		}
 
-		/* ── SERVICES SECTION ── */
-		#services {
+		/* ── SHARED SECTION STYLES ── */
+		section {
 			position: relative;
 			z-index: 10;
-			padding: 5em 2em 4em;
 			max-width: 1100px;
 			margin: 0 auto;
+			padding: 4.5em 2em;
 		}
 
-		#services h2 {
+		section h2 {
 			text-align: center;
-			font-size: 2em;
+			font-size: 1.9em;
 			font-weight: 700;
 			letter-spacing: 0.04em;
 			text-transform: uppercase;
 			color: #fff;
-			margin-bottom: 0.4em;
+			margin-bottom: 0.35em;
 		}
 
-		#services .subtitle {
+		section .subtitle {
 			text-align: center;
-			color: rgba(255, 255, 255, 0.6);
+			color: rgba(255, 255, 255, 0.55);
 			font-size: 1.05em;
 			margin-bottom: 3em;
 		}
 
+		.divider {
+			border: none;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		/* ── PHILOSOPHY BANNER ── */
+		#philosophy {
+			padding: 3em 2em;
+		}
+
+		.philosophy-box {
+			background: rgba(255, 255, 255, 0.06);
+			border: 1px solid rgba(255, 255, 255, 0.13);
+			border-radius: 16px;
+			backdrop-filter: blur(14px);
+			padding: 2.4em 2.8em;
+			text-align: center;
+			max-width: 820px;
+			margin: 0 auto;
+		}
+
+		.philosophy-box blockquote {
+			font-size: 1.25em;
+			font-style: italic;
+			font-weight: 300;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.7;
+			margin-bottom: 0.8em;
+		}
+
+		.philosophy-box span {
+			color: rgba(255, 255, 255, 0.4);
+			font-size: 0.85em;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+
+		/* ── CARDS GRID ── */
 		.cards {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 1.6em;
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			gap: 1.5em;
 		}
 
 		.card {
-			background: rgba(255, 255, 255, 0.06);
-			border: 1px solid rgba(255, 255, 255, 0.12);
+			background: rgba(255, 255, 255, 0.05);
+			border: 1px solid rgba(255, 255, 255, 0.11);
 			backdrop-filter: blur(12px);
 			border-radius: 16px;
 			padding: 2em 1.8em;
@@ -100,107 +139,92 @@
 		}
 
 		.card:hover {
-			transform: translateY(-6px);
-			background: rgba(255, 255, 255, 0.10);
+			transform: translateY(-5px);
+			background: rgba(255, 255, 255, 0.09);
 		}
 
 		.card .icon {
-			font-size: 2em;
+			font-size: 1.9em;
 			margin-bottom: 0.6em;
 			display: block;
 		}
 
 		.card h3 {
 			color: #fff;
-			font-size: 1.1em;
+			font-size: 1em;
 			font-weight: 700;
-			margin-bottom: 0.5em;
+			margin-bottom: 0.45em;
 			text-transform: uppercase;
 			letter-spacing: 0.05em;
 		}
 
 		.card p {
-			color: rgba(255, 255, 255, 0.7);
-			font-size: 0.92em;
+			color: rgba(255, 255, 255, 0.65);
+			font-size: 0.9em;
 			line-height: 1.7;
 		}
 
-		/* ── HOW IT WORKS ── */
-		#how {
-			position: relative;
-			z-index: 10;
-			padding: 4em 2em;
-			max-width: 900px;
-			margin: 0 auto;
-			text-align: center;
-		}
-
-		#how h2 {
-			font-size: 2em;
-			font-weight: 700;
-			color: #fff;
+		.card .tag {
+			display: inline-block;
+			margin-top: 1em;
+			font-size: 0.72em;
 			text-transform: uppercase;
-			letter-spacing: 0.04em;
-			margin-bottom: 0.4em;
+			letter-spacing: 0.1em;
+			color: rgba(255, 255, 255, 0.3);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			border-radius: 50px;
+			padding: 0.2em 0.8em;
 		}
 
-		#how .subtitle {
-			color: rgba(255, 255, 255, 0.6);
-			margin-bottom: 3em;
-		}
-
-		.steps {
+		/* ── PILLARS / NUMBERED LIST ── */
+		.pillars {
 			display: flex;
 			flex-direction: column;
-			gap: 1.4em;
-			text-align: left;
+			gap: 1.2em;
 		}
 
-		.step {
+		.pillar {
 			display: flex;
 			gap: 1.4em;
 			align-items: flex-start;
-			background: rgba(255, 255, 255, 0.05);
-			border: 1px solid rgba(255, 255, 255, 0.1);
+			background: rgba(255, 255, 255, 0.04);
+			border: 1px solid rgba(255, 255, 255, 0.09);
 			border-radius: 12px;
-			padding: 1.4em 1.6em;
+			padding: 1.3em 1.6em;
 			backdrop-filter: blur(10px);
 		}
 
-		.step-num {
-			font-size: 1.8em;
+		.pillar-num {
+			font-size: 1.7em;
 			font-weight: 900;
-			color: rgba(255, 255, 255, 0.15);
+			color: rgba(255, 255, 255, 0.12);
 			min-width: 2rem;
 			line-height: 1;
 		}
 
-		.step-body h4 {
+		.pillar-body h4 {
 			color: #fff;
-			font-size: 1em;
+			font-size: 0.95em;
 			font-weight: 700;
 			margin-bottom: 0.3em;
 			text-transform: uppercase;
 			letter-spacing: 0.04em;
 		}
 
-		.step-body p {
-			color: rgba(255, 255, 255, 0.65);
-			font-size: 0.9em;
+		.pillar-body p {
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 0.88em;
 			line-height: 1.65;
 		}
 
 		/* ── CTA ── */
 		#cta {
-			position: relative;
-			z-index: 10;
 			text-align: center;
 			padding: 4em 2em 6em;
 		}
 
 		#cta h2 {
 			font-size: 2em;
-			font-weight: 700;
 			color: #fff;
 			margin-bottom: 0.5em;
 			text-transform: uppercase;
@@ -208,7 +232,7 @@
 		}
 
 		#cta p {
-			color: rgba(255, 255, 255, 0.65);
+			color: rgba(255, 255, 255, 0.6);
 			margin-bottom: 2em;
 			font-size: 1.05em;
 		}
@@ -224,20 +248,12 @@
 			text-decoration: none;
 			letter-spacing: 0.05em;
 			text-transform: uppercase;
-			transition: background 0.2s, color 0.2s, transform 0.2s;
+			transition: background 0.2s, transform 0.2s;
 		}
 
 		.btn:hover {
 			background: rgba(255, 255, 255, 0.85);
 			transform: translateY(-2px);
-		}
-
-		/* divider */
-		.divider {
-			border: none;
-			border-top: 1px solid rgba(255, 255, 255, 0.1);
-			max-width: 800px;
-			margin: 0 auto;
 		}
 	</style>
 </head>
@@ -255,7 +271,7 @@
 			<header id="header">
 				<img src="assets/logo.png" alt="CrackedMilk Logo" class="logo">
 				<h1>CrackedMilk</h1>
-				<p>Synthetic Creators &nbsp;&bull;&nbsp; AI Video &nbsp;&bull;&nbsp; Viral Engines</p>
+				<p>AI-Powered Marketing &nbsp;&bull;&nbsp; Full-Stack Growth &nbsp;&bull;&nbsp; Luxury Execution</p>
 				<nav>
 					<ul>
 						<li><a href="mailto:hello@crackedmilk.com" class="icon solid fa-envelope"><span
@@ -268,95 +284,109 @@
 
 			<hr class="divider" />
 
-			<!-- Services -->
+			<!-- Philosophy -->
+			<section id="philosophy">
+				<div class="philosophy-box">
+					<blockquote>"We build you a bespoke AI marketing infrastructure — combining synthetic content,
+						predictive intelligence, and hyper-personalization — that executes faster, tests broader, and
+						converts deeper than any human agency."</blockquote>
+					<span>— The CrackedMilk Approach</span>
+				</div>
+			</section>
+
+			<hr class="divider" />
+
+			<!-- Services: full offer -->
 			<section id="services">
 				<h2>What We Do</h2>
-				<p class="subtitle">We build your bespoke AI video growth engine — then run it.</p>
+				<p class="subtitle">Six interconnected disciplines — deployed together as one AI-powered growth
+					infrastructure.</p>
 				<div class="cards">
 					<div class="card">
 						<span class="icon">🎬</span>
-						<h3>Generative Video at Scale</h3>
-						<p>50–100 hyper-personalized, algorithm-ready short-form videos per week — produced by AI,
-							refined by our team. TikTok, Reels, Shorts, Ads.</p>
-					</div>
-					<div class="card">
-						<span class="icon">🤖</span>
-						<h3>Synthetic Brand Creators</h3>
-						<p>We design proprietary digital influencers that embody your brand 24/7. They never sleep,
-							never get cancelled, and never renegotiate their contract.</p>
-					</div>
-					<div class="card">
-						<span class="icon">🧪</span>
-						<h3>Relentless A/B Testing</h3>
-						<p>Real-time hook swaps, visual variants, and multi-lingual dubbing — tested systematically to
-							find the highest-converting format for your audience.</p>
+						<h3>Generative Video Engine</h3>
+						<p>50–100 hyper-personalized short-form videos per week — TikTok, Reels, Shorts, Ads. Synthetic
+							brand creators, AI animation, relentless A/B testing. Content fatigue? Solved.</p>
+						<span class="tag">Flagship</span>
 					</div>
 					<div class="card">
 						<span class="icon">🔍</span>
 						<h3>Answer Engine Optimization</h3>
-						<p>We structure your content to be cited by AI search (ChatGPT, Perplexity, Google AI Overviews)
-							— future-proofing your brand's discoverability.</p>
+						<p>Google is shifting to AI-first. We structure your content to be the definitive answer cited
+							by ChatGPT, Perplexity, and Google AI Overviews — future-proofing your discoverability.</p>
+						<span class="tag">Owned Media</span>
 					</div>
 					<div class="card">
 						<span class="icon">📈</span>
 						<h3>Predictive Revenue Analytics</h3>
-						<p>We use ML to forecast Customer LTV and creator conversion rates before a campaign launches.
-							Budget is optimized on revenue signals — not vanity metrics.</p>
+						<p>ML models forecast Customer LTV and creator conversion rates <em>before</em> a campaign
+							launches. We optimize budgets on actual revenue signals — never vanity metrics.</p>
+						<span class="tag">Intelligence</span>
 					</div>
 					<div class="card">
 						<span class="icon">⚡</span>
 						<h3>AI Hyper-Personalization</h3>
-						<p>Dynamic website experiences, email cadences, and landing pages tailored in real-time to
-							individual users — driving loyalty and conversion.</p>
+						<p>Real-time behavior analysis to dynamically tailor website UX, email cadences, and landing
+							pages at the individual level — driving loyalty and conversion on every channel.</p>
+						<span class="tag">Conversion</span>
+					</div>
+					<div class="card">
+						<span class="icon">🎯</span>
+						<h3>Landing Page Surgery</h3>
+						<p>We audit your existing page, apply you-focused copy, add social proof, and run brutal live
+							"Roast Protocol" sessions with real users. Average result: 2× conversion rate.</p>
+						<span class="tag">CRO</span>
+					</div>
+					<div class="card">
+						<span class="icon">📡</span>
+						<h3>Multi-Channel Expansion</h3>
+						<p>Beyond the launch spike — B2B cold outreach, free SEO tools to capture search intent,
+							data-driven programmatic pages, and weekly newsletter nurturing to hold the audience we
+							build.</p>
+						<span class="tag">Distribution</span>
 					</div>
 				</div>
 			</section>
 
 			<hr class="divider" />
 
-			<!-- How it works -->
-			<section id="how">
-				<h2>How It Works</h2>
-				<p class="subtitle">Our 5-step pipeline replaces an entire in-house content team.</p>
-				<div class="steps">
-					<div class="step">
-						<span class="step-num">01</span>
-						<div class="step-body">
-							<h4>Data-Driven Ideation</h4>
-							<p>We scrape TikTok and Reels for breakout formats in your niche, then run every topic
-								through our proprietary CrackedMilk Scriptwriter GPT.</p>
+			<!-- Our edge -->
+			<section id="edge">
+				<h2>The CrackedMilk Edge</h2>
+				<p class="subtitle">We only work on Painkillers. Never Vitamins.</p>
+				<div class="pillars">
+					<div class="pillar">
+						<span class="pillar-num">01</span>
+						<div class="pillar-body">
+							<h4>Painkiller-Only Philosophy</h4>
+							<p>Before a single asset is created, we run a product-market audit. If your product is a
+								"nice-to-have," we find the Painkiller angle first. We don't scale things that don't
+								deserve to scale.</p>
 						</div>
 					</div>
-					<div class="step">
-						<span class="step-num">02</span>
-						<div class="step-body">
-							<h4>Visual Asset Creation</h4>
-							<p>Ultra-high-res, perfectly branded visuals generated with top-tier image models
-								(Midjourney v6+, Flux) — locked to your dark, luxury moodboard.</p>
+					<div class="pillar">
+						<span class="pillar-num">02</span>
+						<div class="pillar-body">
+							<h4>Speed That Is Structurally Impossible for Humans</h4>
+							<p>We use a bespoke AI infrastructure — Midjourney, Runway, ElevenLabs, n8n, Remotion — to
+								do in 3 days what a traditional agency does in 3 months. At a fraction of the cost.</p>
 						</div>
 					</div>
-					<div class="step">
-						<span class="step-num">03</span>
-						<div class="step-body">
-							<h4>Cinematic Animation</h4>
-							<p>Static images become photorealistic motion clips via Runway Gen-3, Luma, or Kling — each
-								precisely art-directed for maximum retention.</p>
+					<div class="pillar">
+						<span class="pillar-num">03</span>
+						<div class="pillar-body">
+							<h4>Computational Precision Over Gut Feeling</h4>
+							<p>Every decision is tested. Every hook is measured. Every budget allocation is driven by
+								revenue signals. We iterate in weekly sprints — fail fast, double down on what wins.</p>
 						</div>
 					</div>
-					<div class="step">
-						<span class="step-num">04</span>
-						<div class="step-body">
-							<h4>Voice Synthesis</h4>
-							<p>Your cloned Brand Voice — authoritative, slightly raspy, broadcast-quality — rendered
-								with ElevenLabs and fine-tuned to the script's pacing.</p>
-						</div>
-					</div>
-					<div class="step">
-						<span class="step-num">05</span>
-						<div class="step-body">
-							<h4>Assembly & Infinite Testing</h4>
-							<p>Everything is assembled, captioned, and published. Then we systematically swap hooks and
-								visuals to find the winning variant — and scale it.</p>
+					<div class="pillar">
+						<span class="pillar-num">04</span>
+						<div class="pillar-body">
+							<h4>Luxury Aesthetic as Standard</h4>
+							<p>The dark, high-end CrackedMilk aesthetic is not optional. It's the moat. Our brand
+								identity system ensures every deliverable — video, page, email — looks like it cost 10×
+								what it did.</p>
 						</div>
 					</div>
 				</div>
@@ -367,7 +397,7 @@
 			<!-- CTA -->
 			<section id="cta">
 				<h2>Ready to crack the algorithm?</h2>
-				<p>We do in 3 days what a traditional agency does in 3 months.</p>
+				<p>Tell us what you're building. We'll tell you how to make it impossible to ignore.</p>
 				<a href="mailto:hello@crackedmilk.com" class="btn">Get in Touch</a>
 			</section>
 
